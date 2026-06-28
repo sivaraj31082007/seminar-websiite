@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 7 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 7 - Chess Board using Nested Loop</h1>
+
+<pre>
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Chessboard&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;table border="1" cellspacing="0" cellpadding="20"&gt;
+
+&lt;?php
+
+for($row = 1; $row &lt;= 8; $row++)
+{
+    echo "&lt;tr&gt;";
+
+    for($col = 1; $col &lt;= 8; $col++)
+    {
+        $total = $row + $col;
+
+        if($total % 2 == 0)
+            echo "&lt;td bgcolor='white'&gt;&lt;/td&gt;";
+        else
+            echo "&lt;td bgcolor='black'&gt;&lt;/td&gt;";
+    }
+
+    echo "&lt;/tr&gt;";
+}
+
+?&gt;
+
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

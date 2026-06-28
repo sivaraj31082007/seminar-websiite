@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 6 - Sum of Integers (0–30)</h1>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Sum of Integers&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Sum of all the integers between 0 and 30&lt;/h2&gt;
+
+&lt;?php
+
+$sum = 0;
+
+for($i = 0; $i &lt;= 30; $i++)
+{
+    $sum = $sum + $i;
+}
+
+echo "&lt;h2&gt;Total Sum = $sum&lt;/h2&gt;";
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

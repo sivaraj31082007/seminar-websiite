@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Program</title>
+</head>
+<body>
+
+<?php
+
+$temp = array(78, 60, 62, 68, 71, 68, 73, 85, 66, 64,
+              76, 63, 75, 76, 73, 68, 62, 73, 72, 65);
+
+$total = array_sum($temp);
+$count = count($temp);
+$average = $total / $count;
+
+
+
+echo "<h3>Temperatures:</h3>";
+echo "(";
+for($i=0; $i<$count-1; $i++)
+{
+    echo $temp[$i] . " , ";
+}
+echo "$temp[19]";
+echo ")";
+
+
+
+echo "<h3>Average Temperature: $average</h3>";
+
+sort($temp);
+
+echo "<h3>Five Lowest Temperatures:</h3>";
+for($i=0; $i<5; $i++)
+{
+    echo $temp[$i] . " ";
+}
+
+echo "<h3>Five Highest Temperatures:</h3>";
+for($i=$count-5; $i<$count; $i++)
+{
+    echo $temp[$i] . " ";
+}
+
+?>
+
+</body>
+</html>

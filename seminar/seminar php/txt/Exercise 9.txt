@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Date Difference</title>
+</head>
+
+<body>
+
+<form method="POST">
+
+Enter First Date:
+<input type="date" name="date1"><br><br>
+
+Enter Second Date:
+<input type="date" name="date2"><br><br>
+
+<input type="submit" value="Calculate">
+
+</form>
+
+<?php
+
+if(isset($_POST['date1']) && isset($_POST['date2']))
+{
+    $date1 = new DateTime($_POST['date1']);
+    $date2 = new DateTime($_POST['date2']);
+
+    $diff = $date1->diff($date2);
+
+    echo "Years : " . $diff->y . "<br>";
+    echo "Months : " . $diff->m . "<br>";
+    echo "Days : " . $diff->d . "<br>";
+    echo "Total Days : " . $diff->days;
+}
+
+?>
+
+</body>
+</html>

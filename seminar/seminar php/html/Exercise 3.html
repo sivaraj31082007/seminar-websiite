@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 3 - Ternary Operator</h1>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Check the Number&lt;/h2&gt;
+
+&lt;form method="POST"&gt;
+
+Enter Number:
+&lt;input type="text" name="num"&gt;
+
+&lt;input type="submit" value="Check"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_POST['num']))
+{
+    $num = $_POST['num'];
+
+    echo ($num &gt; 30) ? "Greater than 30" :
+         (($num &gt; 20) ? "Greater than 20" :
+         (($num &gt; 10) ? "Greater than 10" :
+         "10 or less"));
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+</script>
+
+</body>
+</html>

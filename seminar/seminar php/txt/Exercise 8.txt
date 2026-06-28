@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Lowercase Check</title>
+</head>
+
+<body>
+
+<form method="POST">
+
+<h3>Lowercase Check</h3>
+
+Enter a String:
+<input type="text" name="str">
+
+<input type="submit" value="Check">
+
+</form>
+
+<?php
+
+if(isset($_POST['str']))
+{
+    $str = $_POST['str'];
+
+    if($str == strtolower($str))
+    {
+        echo "The string is in lowercase.";
+    }
+    else
+    {
+        echo "The string is not in lowercase.";
+    }
+}
+
+?>
+
+</body>
+</html>

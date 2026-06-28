@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 2 - Page Redirection</h1>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+
+&lt;h2&gt;Click here to Redirect to Google:&lt;/h2&gt;
+
+&lt;input type="submit" name="submit" value="Go to Google"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_POST["submit"]))
+{
+    header("Location: https://www.google.com");
+    exit();
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','s','a'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

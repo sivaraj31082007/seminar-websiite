@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Timezone Example</title>
+</head>
+
+<body>
+
+<form method="POST">
+
+Select Timezone:
+
+<select name="zone">
+    <option value="Asia/Kolkata">India</option>
+    <option value="America/New_York">USA</option>
+    <option value="Europe/London">London</option>
+    <option value="Asia/Tokyo">Japan</option>
+</select>
+
+<input type="submit" value="Show Time">
+
+</form>
+
+<?php
+
+if(isset($_POST['zone']))
+{
+    date_default_timezone_set($_POST['zone']);
+
+    echo "<br>Current Date : " . date("d-m-Y");
+
+    echo "<br>Current Time : " . date("h:i:s A");
+}
+
+?>
+
+</body>
+</html>

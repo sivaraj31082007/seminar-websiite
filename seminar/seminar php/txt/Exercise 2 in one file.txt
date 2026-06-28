@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<form method="POST">
+
+<h2>Click here to Redirect to google:</h2>
+<input type="submit" name="submit" value="Go to Google">
+
+</form>
+
+<?php
+
+if(isset($_POST["submit"]))
+{
+    header("Location: https://www.google.com");
+    exit();
+}
+
+?>
+
+</body>
+</html>

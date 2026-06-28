@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country and Capital</title>
+</head>
+<body>
+
+<h2>Country and Capital List</h2>
+
+<?php
+
+$country = array(
+    "India" => "New Delhi",
+    "Japan" => "Tokyo",
+    "France" => "Paris",
+    "Germany" => "Berlin",
+    "Italy" => "Rome"
+);
+
+// Display country and capital
+foreach($country as $cname => $capital)
+{
+    echo "<b>Country:</b> " . $cname . " - ";
+    echo "<b>Capital:</b> " . $capital . "<br><br>";
+}
+
+// Sort by country name
+ksort($country);
+
+echo "<br><h2>Sort the list by the name of the country:</h2><br>";
+
+// Display country and capital
+foreach($country as $cname => $capital)
+{
+    echo "<b>Country:</b> " . $cname . " - ";
+    echo "<b>Capital:</b> " . $capital . "<br><br>";
+}
+
+?>
+
+</body>
+</html>
+

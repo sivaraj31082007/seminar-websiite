@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 9 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 9 - Date Difference</h1>
+
+<pre>
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Date Difference&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+
+Enter First Date:
+&lt;input type="date" name="date1"&gt;&lt;br&gt;&lt;br&gt;
+
+Enter Second Date:
+&lt;input type="date" name="date2"&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;input type="submit" value="Calculate"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_POST['date1']) && isset($_POST['date2']))
+{
+    $date1 = new DateTime($_POST['date1']);
+    $date2 = new DateTime($_POST['date2']);
+
+    $diff = $date1-&gt;diff($date2);
+
+    echo "Years : " . $diff-&gt;y . "&lt;br&gt;";
+    echo "Months : " . $diff-&gt;m . "&lt;br&gt;";
+    echo "Days : " . $diff-&gt;d . "&lt;br&gt;";
+    echo "Total Days : " . $diff-&gt;days;
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

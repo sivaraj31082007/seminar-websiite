@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Username</title>
+</head>
+
+<body>
+
+<form method="POST">
+
+<h2>Please enter your name:</h2>
+
+<input type="text" name="name">
+
+<input type="submit" value="Submit">
+
+</form>
+
+<?php
+if(isset($_POST["name"]))
+{
+    $name = $_POST["name"];
+    echo "<h2>Hello $name</h2>";
+}
+?>
+
+</body>
+</html>

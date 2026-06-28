@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 8 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 8 - Lowercase String Check</h1>
+
+<pre>
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Lowercase Check&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+
+&lt;h3&gt;Lowercase Check&lt;/h3&gt;
+
+Enter a String:
+&lt;input type="text" name="str"&gt;
+
+&lt;input type="submit" value="Check"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_POST['str']))
+{
+    $str = $_POST['str'];
+
+    if($str == strtolower($str))
+    {
+        echo "The string is in lowercase.";
+    }
+    else
+    {
+        echo "The string is not in lowercase.";
+    }
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

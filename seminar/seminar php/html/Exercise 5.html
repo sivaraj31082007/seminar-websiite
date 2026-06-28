@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 5 - Temperature Analysis</h1>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Temperature Program&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;?php
+
+$temp = array(78, 60, 62, 68, 71, 68, 73, 85, 66, 64,
+              76, 63, 75, 76, 73, 68, 62, 73, 72, 65);
+
+$total = array_sum($temp);
+$count = count($temp);
+$average = $total / $count;
+
+echo "&lt;h3&gt;Temperatures:&lt;/h3&gt;";
+echo "(";
+for($i=0; $i&lt;$count-1; $i++)
+{
+    echo $temp[$i] . " , ";
+}
+echo "$temp[19]";
+echo ")";
+
+echo "&lt;h3&gt;Average Temperature: $average&lt;/h3&gt;";
+
+sort($temp);
+
+echo "&lt;h3&gt;Five Lowest Temperatures:&lt;/h3&gt;";
+for($i=0; $i&lt;5; $i++)
+{
+    echo $temp[$i] . " ";
+}
+
+echo "&lt;h3&gt;Five Highest Temperatures:&lt;/h3&gt;";
+for($i=$count-5; $i&lt;$count; $i++)
+{
+    echo $temp[$i] . " ";
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>

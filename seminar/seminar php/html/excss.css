@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#09091a,#1b1464,#3c1361,#0f3460);
+    background-size:400% 400%;
+    animation:bgMove 15s infinite alternate;
+    color:#fff;
+    padding:40px;
+}
+
+@keyframes bgMove{
+    from{background-position:left;}
+    to{background-position:right;}
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    color:#00f7ff;
+    margin-bottom:30px;
+    text-shadow:0 0 15px #00f7ff;
+}
+
+/* Code Box */
+pre{
+    background:#111827;
+    color:#7CFC98;
+    font-family:'JetBrains Mono',monospace;
+    font-size:15px;
+    line-height:1.8;
+    padding:30px;
+    border-radius:20px;
+    border:2px solid #00f7ff;
+    overflow:auto;
+    white-space:pre-wrap;
+    box-shadow:
+    0 0 20px rgba(0,255,255,.4),
+    0 0 40px rgba(255,0,255,.2);
+}
+
+/* Scrollbar */
+pre::-webkit-scrollbar{
+    width:10px;
+}
+
+pre::-webkit-scrollbar-thumb{
+    background:#00f7ff;
+    border-radius:20px;
+}
+
+/* Floating Glow */
+pre:hover{
+    transform:scale(1.01);
+    transition:.4s;
+    box-shadow:
+    0 0 25px cyan,
+    0 0 50px magenta;
+}
+
+/* Stars */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        radial-gradient(white 1px,transparent 1px),
+        radial-gradient(cyan 1px,transparent 1px),
+        radial-gradient(hotpink 1px,transparent 1px);
+    background-size:100px 100px,150px 150px,200px 200px;
+    opacity:.2;
+    pointer-events:none;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    pre{
+        font-size:13px;
+        padding:18px;
+    }
+}

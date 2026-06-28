@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 1 Code</title>
+
+<style>
+body{
+    background:#0f172a;
+    font-family:Consolas, monospace;
+    padding:30px;
+}
+
+pre{
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+    user-select:none;
+    white-space:pre-wrap;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+h1{
+    color:white;
+    text-align:center;
+}
+</style>
+
+<link  rel="stylesheet" href="excss.css" type="text/css">
+
+
+</head>
+
+<body>
+
+<h1>Exercise 1 - HTML Form with Username</h1>
+
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Username&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form method="POST"&gt;
+
+&lt;h2&gt;Please enter your name:&lt;/h2&gt;
+
+&lt;input type="text" name="name"&gt;
+
+&lt;input type="submit" value="Submit"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+if(isset($_POST["name"]))
+{
+    $name = $_POST["name"];
+    echo "&lt;h2&gt;Hello $name&lt;/h2&gt;";
+}
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
+
+</body>
+</html>

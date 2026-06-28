@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<h2>Check the Number</h2>
+
+<form method="POST">
+
+Enter Number:
+<input type="text" name="num">
+
+<input type="submit" value="Check">
+
+</form>
+
+<?php
+
+if(isset($_POST['num']))
+{
+    $num = $_POST['num'];
+
+    echo ($num > 30) ? "Greater than 30" :
+         (($num > 20) ? "Greater than 20" :
+         (($num > 10) ? "Greater than 10" :
+         "10 or less"));
+}
+
+?>
+
+</body>
+</html>

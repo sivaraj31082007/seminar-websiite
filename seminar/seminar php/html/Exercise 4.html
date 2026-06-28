@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 4 Code</title>
+
+    <style>
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+            font-family:Consolas, monospace;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+        }
+
+        pre{
+            background:#1e293b;
+            padding:20px;
+            border-radius:10px;
+            overflow:auto;
+            white-space:pre-wrap;
+            user-select:none;
+            border:1px solid #334155;
+        }
+    </style>
+
+    <link  rel="stylesheet" href="excss.css" type="text/css">
+</head>
+
+<body>
+
+<h1>Exercise 4 - Country and Capital Array</h1>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Country and Capital&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Country and Capital List&lt;/h2&gt;
+
+&lt;?php
+
+$country = array(
+    "India" =&gt; "New Delhi",
+    "Japan" =&gt; "Tokyo",
+    "France" =&gt; "Paris",
+    "Germany" =&gt; "Berlin",
+    "Italy" =&gt; "Rome"
+);
+
+// Display country and capital
+foreach($country as $cname =&gt; $capital)
+{
+    echo "&lt;b&gt;Country:&lt;/b&gt; " . $cname . " - ";
+    echo "&lt;b&gt;Capital:&lt;/b&gt; " . $capital . "&lt;br&gt;&lt;br&gt;";
+}
+
+// Sort by country name
+ksort($country);
+
+echo "&lt;br&gt;&lt;h2&gt;Sort the list by the name of the country:&lt;/h2&gt;&lt;br&gt;";
+
+// Display country and capital
+foreach($country as $cname =&gt; $capital)
+{
+    echo "&lt;b&gt;Country:&lt;/b&gt; " . $cname . " - ";
+    echo "&lt;b&gt;Capital:&lt;/b&gt; " . $capital . "&lt;br&gt;&lt;br&gt;";
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+
+document.addEventListener('keydown', function(e){
+    if((e.ctrlKey || e.metaKey) && ['c','u','a','s'].includes(e.key.toLowerCase())){
+        e.preventDefault();
+    }
+
+    if(e.key === "F12"){
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>
