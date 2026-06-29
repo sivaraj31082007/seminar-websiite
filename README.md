@@ -4,7 +4,7 @@ A modern and responsive seminar website developed using HTML, CSS, and JavaScrip
 
 ## 🔗 Live Demo
 
-https://sivaraj31082007.github.io/seminar-website/
+https://sivaraj31082007.github.io/seminar-websiite/
 
 ## ✨ Features
 
