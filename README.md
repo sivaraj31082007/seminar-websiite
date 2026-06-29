@@ -2,9 +2,11 @@
 
 A modern and responsive seminar website developed using HTML, CSS, and JavaScript. This project is designed to present seminar information in a clean, user-friendly, and professional manner.
 
+
 ## 🔗 Live Demo
 
 https://sivaraj31082007.github.io/seminar-websiite/
+
 
 ## ✨ Features
 
